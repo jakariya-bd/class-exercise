@@ -1,0 +1,19 @@
+Pseudo Code: Calculate String Length
+
+BEGIN
+    Declare a character array str[101]
+    Declare integers i, len
+
+    Display "Enter the string:"
+    Read str from the user
+
+    FOR i from 0 WHILE str[i] is not equal to '\0' DO
+        Increment i by 1
+    END FOR
+
+    len <- i
+
+    Display "Length of", str, "is", len
+
+    Return 0
+END
