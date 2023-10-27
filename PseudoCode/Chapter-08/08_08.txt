@@ -1,0 +1,27 @@
+Pseudo Code: Matrix Generation and Printing
+
+BEGIN
+    Declare a 2D array mat[5][5]
+    Declare integers i, k, n = 5
+
+    FOR i from 0 to n - 1 DO
+        FOR k from 0 to n - 1 DO
+            IF i + k + 1 < n THEN
+                mat[i][k] <- 1
+            ELSE IF i + k + 1 > n THEN
+                mat[i][k] <- -1
+            ELSE
+                mat[i][k] <- 0
+            END IF
+        END FOR
+    END FOR
+
+    FOR i from 0 to n - 1 DO
+        FOR k from 0 to n - 1 DO
+            Display mat[i][k], followed by a space with a width of 2
+        END FOR
+        Display a new line
+    END FOR
+
+    Return 0
+END
