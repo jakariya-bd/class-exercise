@@ -1,0 +1,51 @@
+Pseudo Code: Merging Two Sorted Arrays
+
+BEGIN
+    Declare arrays A[MX], B[MX], C[2*MX]
+    Declare integers nA, nB, nC, ai, bi, ci
+
+    Display "Enter the size of A and its elements:"
+    Read nA from the user
+
+    FOR ai from 0 to nA - 1 DO
+        Read A[ai] from the user
+
+    Display "Enter the size of B and its elements:"
+    Read nB from the user
+
+    FOR bi from 0 to nB - 1 DO
+        Read B[bi] from the user
+
+    nC <- nA + nB
+    ai <- bi <- ci <- 0
+
+    WHILE ai < nA AND bi < nB DO
+        IF A[ai] < B[bi] THEN
+            C[ci] <- A[ai]
+            Increment ai by 1
+        ELSE
+            C[ci] <- B[bi]
+            Increment bi by 1
+        END IF
+        Increment ci by 1
+
+    WHILE ai < nA DO
+        C[ci] <- A[ai]
+        Increment ai by 1
+        Increment ci by 1
+
+    WHILE bi < nB DO
+        C[ci] <- B[bi]
+        Increment bi by 1
+        Increment ci by 1
+
+    Display "Size of C:", nC
+
+    FOR ci from 0 to nC - 1 DO
+        Display C[ci], followed by a space
+    END FOR
+
+    Display a new line
+
+    Return 0
+END
