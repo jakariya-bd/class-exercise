@@ -1,0 +1,20 @@
+Pseudo Code: Pascal's Triangle Generation and Printing
+
+BEGIN
+    Declare a 2D array pasc_tri[10][10]
+    Initialize variables row and col
+
+    FOR row from 0 to 9 DO
+        pasc_tri[row][0] <- 1
+        pasc_tri[row][row] <- 1
+
+        FOR col from 1 to (row - 1) DO
+            pasc_tri[row][col] <- pasc_tri[row-1][col-1] + pasc_tri[row-1][col]
+
+    FOR row from 0 to 9 DO
+        FOR col from 0 to row DO
+            Display pasc_tri[row][col] and a tab character
+        Display a new line
+
+    Return 0
+END
