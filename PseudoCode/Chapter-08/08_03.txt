@@ -1,0 +1,44 @@
+Pseudo Code: Vote Counting
+
+Input:
+- n (number of votes)
+- Array count to store vote counts for candidates
+- spoilt_count to store the count of spoilt ballots
+- v (candidate number on each ballot)
+
+Output:
+- Display the count of votes for each candidate
+- Display the count of spoilt ballots
+
+BEGIN
+    Display "Enter the number of votes (ballots):"
+    Read n from the user
+
+    FOR i from 1 to 5 DO
+        count[i] <- 0 (Initialize vote count for each candidate)
+    END FOR
+
+    spoilt_count <- 0 (Initialize count of spoilt ballots)
+
+    Display "Enter the marked candidates on the ballots:"
+
+    FOR i from 1 to n DO
+        Read v from the user
+
+        IF v is in the range of 1 to 5 THEN
+            Increment count[v] by 1 (Increment the vote count for the respective candidate)
+        ELSE
+            Increment spoilt_count by 1 (Increment the count of spoilt ballots)
+        END IF
+    END FOR
+
+    Display "Count of votes cast for the candidates:"
+
+    FOR i from 1 to 5 DO
+        Display "Candidate No.", i, ":", count[i]
+    END FOR
+
+    Display "Count of spoilt ballots:", spoilt_count
+
+    Return 0
+END
