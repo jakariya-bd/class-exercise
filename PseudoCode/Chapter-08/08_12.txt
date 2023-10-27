@@ -1,0 +1,25 @@
+Pseudo Code: Count Occurrences of a Character in a Line
+
+BEGIN
+    Declare a character array line[1001]
+    Declare a character ch
+    Declare an integer count and i
+
+    Display "Enter a line of text:"
+    Read line until a newline character is encountered and store it in line
+
+    Display "Enter a character:"
+    Read a character and store it in ch
+
+    count <- 0
+
+    FOR i from 0 WHILE line[i] is not equal to '\0' DO
+        IF line[i] is equal to ch THEN
+            Increment count by 1
+        END IF
+    END FOR
+
+    Display "Number of occurrences of", ch, "in the line is", count
+
+    Return 0
+END
