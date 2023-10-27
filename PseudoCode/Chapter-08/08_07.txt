@@ -1,0 +1,33 @@
+Pseudo Code: Matrix Multiplication
+
+BEGIN
+    Declare n, A[MX][MX], B[MX][MX], C[MX][MX]
+    Declare integers row, col, i, k
+
+    Display "Enter n:"
+    Read n from the user
+
+    Display "Input matrix A"
+    FOR i from 0 to n - 1 DO
+        FOR k from 0 to n - 1 DO
+            Read A[i][k] from the user
+
+    Display "Input matrix B"
+    FOR i from 0 to n - 1 DO
+        FOR k from 0 to n - 1 DO
+            Read B[i][k] from the user
+
+    FOR row from 0 to n - 1 DO
+        FOR col from 0 to n - 1 DO
+            C[row][col] <- 0
+            FOR k from 0 to n - 1 DO
+                C[row][col] <- C[row][col] + A[row][k] * B[k][col]
+
+    Display "The product matrix C"
+    FOR i from 0 to n - 1 DO
+        FOR k from 0 to n - 1 DO
+            Display C[i][k], followed by a space
+        Display a new line
+
+    Return 0
+END
