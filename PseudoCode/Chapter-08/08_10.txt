@@ -1,0 +1,60 @@
+Pseudo Code: Selection Sort and Binary Search
+
+BEGIN
+    Declare an array A[1001]
+    Declare integers n, i, k, mi, temp, target, mid, low, high
+
+    Display "Enter the number of elements:"
+    Read n from the user
+
+    Display "Enter all elements:"
+    FOR i from 0 to n - 1 DO
+        Read A[i] from the user
+    END FOR
+
+    // Selection Sort
+    FOR i from (n - 1) DOWNTO 1 DO
+        mi <- i
+        FOR k from (i - 1) DOWNTO 0 DO
+            IF A[mi] < A[k] THEN
+                mi <- k
+            END IF
+        END FOR
+
+        IF mi is not equal to i THEN
+            temp <- A[i]
+            A[i] <- A[mi]
+            A[mi] <- temp
+        END IF
+    END FOR
+
+    Display "Sorted array"
+    FOR i from 0 to n - 1 DO
+        Display A[i], followed by a space
+    END FOR
+    Display a new line
+
+    Display "Enter the target element:"
+    Read target from the user
+
+    // Binary Search
+    low <- 0, high <- n - 1
+    WHILE low <= high DO
+        mid <- (low + high) / 2
+        IF A[mid] = target THEN
+            EXIT LOOP (target found)
+        ELSE IF target > A[mid] THEN
+            low <- mid + 1
+        ELSE
+            high <- mid - 1
+        END IF
+    END WHILE
+
+    IF low <= high THEN
+        Display target, "found at", mid
+    ELSE
+        Display "Not found"
+    END IF
+
+    Return 0
+END
