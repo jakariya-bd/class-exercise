@@ -1,0 +1,21 @@
+Pseudo Code: Exchange the Values of Two Variables
+
+BEGIN
+    Declare INTEGER x, y
+
+    PROCEDURE exchange
+        Declare INTEGER t
+        t <- x
+        x <- y
+        y <- t
+    END PROCEDURE
+
+    x <- 5
+    y <- 7
+
+    CALL exchange()
+
+    OUTPUT "x =", x, "y =", y
+
+    RETURN 0
+END

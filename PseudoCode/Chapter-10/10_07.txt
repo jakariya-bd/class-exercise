@@ -1,0 +1,31 @@
+Pseudo Code: Check if a Number is Prime
+
+BEGIN
+    FUNCTION is_prime(n)
+        IF n is less than 2 THEN
+            RETURN 0
+        END IF
+
+        Declare INTEGER i
+
+        FOR i from 2 to (n - 1) DO
+            IF n modulo i is equal to 0 THEN
+                RETURN 0
+            END IF
+        END FOR
+
+        RETURN 1
+    END FUNCTION
+
+    Declare INTEGER n
+
+    INPUT n
+
+    IF is_prime(n) is equal to 1 THEN
+        OUTPUT "Prime number"
+    ELSE
+        OUTPUT "Not a prime number"
+    END IF
+
+    RETURN 0
+END

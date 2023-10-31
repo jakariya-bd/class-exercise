@@ -1,0 +1,25 @@
+Pseudo Code: Count Occurrences of a Substring in a String
+
+BEGIN
+    Declare CHARACTER ARRAY s[101], sub[101]
+    Declare CHARACTER POINTER pos
+    Declare INTEGER counter
+
+    OUTPUT "Enter the string:"
+    INPUT s
+
+    OUTPUT "Enter the substring:"
+    INPUT sub
+
+    counter <- 0
+    pos <- FindSubstring(s, sub)
+
+    WHILE pos is not NULL DO
+        counter <- counter + 1
+        pos <- FindSubstring(s starting from (pos + 1), sub)
+    END WHILE
+
+    OUTPUT "\"" + sub + "\" is occurred " + counter + " time(s) in \"" + s + "\"."
+
+    RETURN 0
+END

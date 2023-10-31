@@ -1,0 +1,34 @@
+Pseudo Code: Question and Answer Check
+
+BEGIN
+    Declare CHARACTER ARRAY ans[101]
+    ans <- "Dennis Ritchie"
+
+    Declare CHARACTER ARRAY reply[101]
+    Declare INTEGER t
+    t <- 1
+
+    OUTPUT "Who is the Inventor of C?"
+
+    REPEAT
+        INPUT reply
+
+        IF reply EQUALS ans THEN
+            OUTPUT "Good"
+            EXIT
+        END IF
+
+        t <- t + 1
+
+        IF t LESS THAN OR EQUAL TO 3 THEN
+            OUTPUT "Try again"
+        END IF
+
+    UNTIL t GREATER THAN 3
+
+    IF t GREATER THAN 3 THEN
+        OUTPUT "Correct answer is Dennis Ritchie"
+    END IF
+
+    RETURN 0
+END

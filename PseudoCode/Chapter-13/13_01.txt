@@ -1,0 +1,24 @@
+Pseudo Code: Copy Contents from One File to Another
+
+BEGIN
+    Declare FILE pointer f1
+    Declare FILE pointer f2
+    Declare INTEGER c
+
+    f1 <- OPEN "input.txt" for reading
+    f2 <- OPEN "output.txt" for writing
+
+    IF f1 is NULL OR f2 is NULL THEN
+        OUTPUT "Error opening files."
+        RETURN EXIT_FAILURE
+    END IF
+
+    WHILE READ character c from f1 UNTIL EOF DO
+        WRITE character c to f2
+    END WHILE
+
+    CLOSE f1
+    CLOSE f2
+
+    RETURN 0
+END

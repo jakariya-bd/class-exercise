@@ -1,0 +1,21 @@
+Pseudo Code: Round a Number to Two Decimal Places
+
+BEGIN
+    FUNCTION round_2_dec(x)
+        Declare REAL x
+
+        x <- x * 100.0
+        x <- round(x)
+        x <- x / 100.0
+
+        RETURN x
+    END FUNCTION
+
+    Declare REAL x
+
+    INPUT x
+
+    OUTPUT round_2_dec(x)
+
+    RETURN 0
+END

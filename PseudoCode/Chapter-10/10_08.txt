@@ -1,0 +1,24 @@
+Pseudo Code: Convert a String to Uppercase
+
+BEGIN
+    PROCEDURE convert_to_uppercase(s)
+        Declare CHARACTER ARRAY s
+        Declare INTEGER i
+
+        FOR i from 0 WHILE s[i] is not equal to '\0' DO
+            IF islower(s[i]) THEN
+                s[i] <- toupper(s[i])
+            END IF
+        END FOR
+    END PROCEDURE
+
+    Declare CHARACTER ARRAY s[101]
+
+    INPUT s
+
+    CALL convert_to_uppercase(s)
+
+    OUTPUT s
+
+    RETURN 0
+END

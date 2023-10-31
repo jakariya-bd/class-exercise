@@ -1,0 +1,54 @@
+Pseudo Code: Define a Time Structure, Input Time, Display Time, and Update Time
+
+BEGIN
+    STRUCT time_struct
+        Declare INTEGER hour
+        Declare INTEGER minute
+        Declare INTEGER second
+    END STRUCT
+
+    FUNCTION input_time(t)
+        Declare time_struct t
+
+        OUTPUT "Enter hour, minute, and second respectively:"
+        INPUT t.hour, t.minute, t.second
+
+        RETURN t
+    END FUNCTION
+
+    PROCEDURE display_time(t)
+        Declare time_struct t
+
+        OUTPUT t.hour, ":", t.minute, ":", t.second
+    END PROCEDURE
+
+    FUNCTION update(t)
+        Declare time_struct t
+
+        t.second <- t.second + 1
+        IF t.second is equal to 60 THEN
+            t.second <- 0
+            t.minute <- t.minute + 1
+
+            IF t.minute is equal to 60 THEN
+                t.minute <- 0
+                t.hour <- t.hour + 1
+
+                IF t.hour is equal to 24 THEN
+                    t.hour <- 0
+                END IF
+            END IF
+        END IF
+
+        RETURN t
+    END FUNCTION
+
+    Declare time_struct t
+
+    t <- CALL input_time(t)
+    CALL display_time(t)
+    t <- CALL update(t)
+    CALL display_time(t)
+
+    RETURN 0
+END

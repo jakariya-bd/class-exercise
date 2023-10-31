@@ -1,0 +1,18 @@
+Pseudo Code: Define and Initialize a Time Structure
+
+BEGIN
+    STRUCT time_struct
+        Declare INTEGER hour
+        Declare INTEGER minute
+        Declare INTEGER second
+    END STRUCT
+
+    Declare time_struct t
+    t.hour <- 16
+    t.minute <- 40
+    t.second <- 51
+
+    OUTPUT t.hour, ":", t.minute, ":", t.second
+
+    RETURN 0
+END

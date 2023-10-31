@@ -1,0 +1,31 @@
+Pseudo Code: Define a Time Structure, Input Time, and Display Time
+
+BEGIN
+    STRUCT time_struct
+        Declare INTEGER hour
+        Declare INTEGER minute
+        Declare INTEGER second
+    END STRUCT
+
+    FUNCTION input_time(t)
+        Declare time_struct t
+
+        OUTPUT "Enter hour, minute, and second respectively:"
+        INPUT t.hour, t.minute, t.second
+
+        RETURN t
+    END FUNCTION
+
+    PROCEDURE display_time(t)
+        Declare time_struct t
+
+        OUTPUT t.hour, ":", t.minute, ":", t.second
+    END PROCEDURE
+
+    Declare time_struct t
+
+    t <- CALL input_time(t)
+    CALL display_time(t)
+
+    RETURN 0
+END

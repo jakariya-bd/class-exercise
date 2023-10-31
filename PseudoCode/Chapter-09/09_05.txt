@@ -1,0 +1,20 @@
+Pseudo Code: Print Characters from String Based on ASCII Values
+
+BEGIN
+    Declare CHARACTER ARRAY s[101]
+    Declare INTEGER i, k
+
+    INPUT s
+
+    FOR i from 0 to 128 DO
+        FOR k from 0 WHILE s[k] is not equal to '\0' DO
+            IF s[k] is equal to i THEN
+                OUTPUT s[k]
+            END IF
+        END FOR
+    END FOR
+
+    OUTPUT a new line
+
+    RETURN 0
+END

@@ -1,0 +1,13 @@
+Pseudo Code: Calculate and Display the Size of a Structure
+
+BEGIN
+    STRUCT my_struct
+        Declare INTEGER i
+        Declare REAL d
+        Declare CHARACTER c
+    END STRUCT
+
+    OUTPUT "Size:", size of my_struct
+
+    RETURN 0
+END

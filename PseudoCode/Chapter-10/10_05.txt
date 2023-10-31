@@ -1,0 +1,23 @@
+Pseudo Code: Calculate and Print Fibonacci Numbers
+
+BEGIN
+    FUNCTION fibo(n)
+        IF n is equal to 1 OR n is equal to 2 THEN
+            RETURN 1
+        ELSE
+            RETURN fibo(n - 1) + fibo(n - 2)
+        END IF
+    END FUNCTION
+
+    Declare INTEGER n, i
+
+    INPUT n
+
+    OUTPUT "Fibonacci numbers:"
+
+    FOR i from 1 to n DO
+        OUTPUT fibo(i)
+    END FOR
+
+    RETURN 0
+END

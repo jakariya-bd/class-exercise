@@ -1,0 +1,20 @@
+Pseudo Code: Calculate and Display Sizes of a Structure and a Union
+
+BEGIN
+    STRUCT my_struct
+        Declare INTEGER i
+        Declare REAL d
+        Declare CHARACTER c
+    END STRUCT
+
+    UNION my_union
+        Declare INTEGER i
+        Declare REAL d
+        Declare CHARACTER c
+    END UNION
+
+    OUTPUT "Size of struct:", size of my_struct
+    OUTPUT "Size of union:", size of my_union
+
+    RETURN 0
+END

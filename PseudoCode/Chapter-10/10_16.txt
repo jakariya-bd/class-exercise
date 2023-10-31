@@ -1,0 +1,31 @@
+Pseudo Code: Check If a Character is Present in a String
+
+BEGIN
+    FUNCTION find(s, c)
+        Declare CHARACTER ARRAY s
+        Declare CHARACTER c
+        Declare INTEGER i
+
+        FOR i from 0 WHILE s[i] is not equal to '\0' DO
+            IF c is equal to s[i] THEN
+                RETURN 1
+            END IF
+        END FOR
+
+        RETURN 0
+    END FUNCTION
+
+    Declare CHARACTER ARRAY s[101]
+    Declare CHARACTER c
+
+    OUTPUT "Enter the string and the target character:"
+    INPUT s, c
+
+    IF find(s, c) is equal to 1 THEN
+        OUTPUT "Found"
+    ELSE
+        OUTPUT "Not found"
+    END IF
+
+    RETURN 0
+END

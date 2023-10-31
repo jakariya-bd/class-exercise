@@ -1,0 +1,29 @@
+Pseudo Code: Compare Two Strings
+
+BEGIN
+    Declare CHARACTER ARRAY s1[101], s2[101]
+    Declare INTEGER n1, n2, n
+
+    INPUT s1, s2
+
+    n1 <- Length of s1
+    n2 <- Length of s2
+
+    n <- n1
+    IF n2 > n1 THEN
+        n <- n2
+    END IF
+
+    Declare INTEGER c_value
+    c_value <- Compare(s1, s2, n)
+
+    IF c_value is equal to 0 THEN
+        OUTPUT "Both are equal."
+    ELSE IF c_value is less than 0 THEN
+        OUTPUT "First string is less than the second one."
+    ELSE
+        OUTPUT "First string is greater than the second one."
+    END IF
+
+    RETURN 0
+END

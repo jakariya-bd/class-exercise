@@ -1,0 +1,15 @@
+Pseudo Code: Print ASCII Values of Characters in a String
+
+BEGIN
+    Declare a character array name[101]
+
+    Read a line of text and store it in name
+
+    Display "ASCII values of each character are:"
+
+    FOR i from 0 WHILE name[i] is not equal to '\0' DO
+        Display "'", name[i], "' ->", ASCII value of name[i]
+    END FOR
+
+    Return 0
+END

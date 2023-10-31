@@ -1,0 +1,22 @@
+Pseudo Code: Extract Substring from a String
+
+BEGIN
+    Declare CHARACTER ARRAY s[101]
+    Declare CHARACTER ARRAY new_s[101]
+    Declare INTEGER n, m, i
+
+    OUTPUT "Enter a string:"
+    INPUT s
+    OUTPUT "Enter the position and length of the substring:"
+    INPUT n, m
+
+    FOR i from 0 to (m - 1) DO
+        new_s[i] <- s[i + n]
+    END FOR
+
+    new_s[m] <- '\0'
+
+    OUTPUT new_s
+
+    RETURN 0
+END

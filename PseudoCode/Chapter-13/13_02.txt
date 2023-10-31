@@ -1,0 +1,59 @@
+Pseudo Code: Merge Data from Two Input Files and Write to an Output File
+
+BEGIN
+    Declare FILE pointer data1
+    Declare FILE pointer data2
+    Declare FILE pointer data3
+
+    data1 <- OPEN "data1.txt" for reading
+    data2 <- OPEN "data2.txt" for reading
+    data3 <- OPEN "data3.txt" for writing
+
+    IF data1 is NULL OR data2 is NULL OR data3 is NULL THEN
+        OUTPUT "Error opening file"
+        RETURN EXIT_FAILURE
+    END IF
+
+    Declare INTEGER ARRAY A[101], B[101]
+    Declare INTEGER i, k, n, m
+
+    i <- 0
+    WHILE READ integer A[i] from data1 UNTIL EOF DO
+        i <- i + 1
+    END WHILE
+    n <- i - 1
+
+    k <- 0
+    WHILE READ integer B[k] from data2 UNTIL EOF DO
+        k <- k + 1
+    END WHILE
+    m <- k - 1
+
+    i <- 0
+    k <- 0
+    WHILE i < n AND k < m DO
+        IF A[i] < B[k] THEN
+            WRITE A[i] to data3
+            i <- i + 1
+        ELSE
+            WRITE B[k] to data3
+            k <- k + 1
+        END IF
+    END WHILE
+
+    WHILE i < n DO
+        WRITE A[i] to data3
+        i <- i + 1
+    END WHILE
+
+    WHILE k < m DO
+        WRITE B[k] to data3
+        k <- k + 1
+    END WHILE
+
+    CLOSE data1
+    CLOSE data2
+    CLOSE data3
+
+    RETURN 0
+END

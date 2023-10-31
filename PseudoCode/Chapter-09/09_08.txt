@@ -1,0 +1,21 @@
+Pseudo Code: Check if a String is a Palindrome
+
+BEGIN
+    Declare CHARACTER ARRAY s[101]
+    INPUT s
+
+    Declare INTEGER flag
+    flag <- 1
+
+    Declare INTEGER i, k
+    FOR i from 0, k <- Length of s - 1 DO
+        IF s[i] is not equal to s[k] THEN
+            flag <- 0
+            EXIT LOOP
+        END IF
+    END FOR
+
+    OUTPUT (IF flag is 1 THEN "Palindrome" ELSE "Not palindrome")
+
+    RETURN 0
+END
